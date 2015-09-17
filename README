@@ -3,4 +3,5 @@ PolishMath
 In these files, I use Polish Math Notation to simplify algebraic equations. By creating an object called MathProblem and giving the algebraic equation as a string, one just has to call solve() to simplify it. 
 
 Features to Fix:
-^ (exponent) is not that throughly account for
+^ (exponent) does not thoroughly account for all possibility
+add trigonometric functions, pi, e, and log compatibility
