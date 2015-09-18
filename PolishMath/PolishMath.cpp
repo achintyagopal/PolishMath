@@ -393,6 +393,10 @@ string operator+(string a, string b){
                 float firstValue = std::stof(substring1);
                 float secondValue = std::stof(substring2);
                 float total = firstValue + secondValue;
+                if(total == 0){
+                    found = true;
+                    break;
+                }
                 stringstream ss;
                 ss << total;
                 ss << substring3;
@@ -619,6 +623,10 @@ string operator-(string a, string b){
                 float firstValue = std::stof(substring1);
                 float secondValue = std::stof(substring2);
                 float total = firstValue - secondValue;
+                if(total == 0){
+                    found = true;
+                    break;
+                }
                 stringstream ss;
                 ss << total;
                 ss << substring3;
@@ -926,6 +934,11 @@ string operator*(string a, string b){
                     if(terms1[i][0] == terms2[m][0]){
                         found = true;
                         stringstream cc;
+                        float total = std::stof(terms1[i][1]) + std::stof(terms2[m][1]);
+                        if(total == 0){
+                            break;
+                        }
+                    
                         cc << (std::stof(terms1[i][1]) + std::stof(terms2[m][1]));
                         terms2[m][1] = cc.str();
                         ss << terms2[m][0];
